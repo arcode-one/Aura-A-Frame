@@ -1,0 +1,20 @@
+:root {
+	/* container */
+	--container: 1320px;
+
+	/* colors */
+	--dark: #080909;
+	--graphite: #111313;
+	--white: #f6f1e8;
+	--muted: rgba(246, 241, 232, 0.68);
+	--line: rgba(246, 241, 232, 0.16);
+	--amber: #e9a14f;
+	--amber-soft: rgba(233, 161, 79, 0.28);
+	--main-color: #000;
+
+	/* radius */
+	--radius-xl: 34px;
+
+	/* transitions */
+	--ease: cubic-bezier(.2, .8, .2, 1);
+}

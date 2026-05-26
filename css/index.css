@@ -1,0 +1,21 @@
+/* base */
+@import "./base/normalize.css";
+@import "./base/fonts.css";
+@import "./base/vars.css";
+@import "./base/globals.css";
+
+/* blocks */
+@import "./blocks/components.css";
+@import "./blocks/header.css";
+@import "./blocks/hero.css";
+@import "./blocks/stays.css";
+@import "./blocks/amenities.css";
+@import "./blocks/reasons.css";
+@import "./blocks/location.css";
+@import "./blocks/escape-modes.css";
+@import "./blocks/booking.css";
+@import "./blocks/booking-request.css";
+@import "./blocks/reviews.css";
+@import "./blocks/faq.css";
+@import "./blocks/footer.css";
+@import "./blocks/reveal.css";

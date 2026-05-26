@@ -1,0 +1,92 @@
+html {
+	--anchor-offset: 120px;
+	scroll-behavior: smooth;
+	background: var(--dark);
+}
+
+.hero[id],
+.section[id] {
+	scroll-margin-top: var(--anchor-offset);
+}
+
+body {
+	font-family: "Manrope", Arial, sans-serif;
+	color: var(--white);
+	background:
+		radial-gradient(
+			circle at 20% 0%,
+			rgba(233, 161, 79, 0.14),
+			transparent 34%
+		),
+		radial-gradient(
+			circle at 80% 15%,
+			rgba(255, 255, 255, 0.06),
+			transparent 30%
+		),
+		var(--dark);
+	overflow-x: hidden;
+}
+
+body.menu-open {
+	overflow: hidden;
+}
+
+.container {
+	width: min(calc(100% - 40px), var(--container));
+	margin: 0 auto;
+}
+
+a {
+	color: inherit;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus {
+	outline: 1px solid var(--main-color);
+	outline-offset: 1px;
+}
+
+@media (max-width: 640px) {
+	.container {
+		width: min(calc(100% - 32px), var(--container));
+	}
+}
+
+@media (max-width: 576px) {
+	.container {
+		width: min(calc(100% - 30px), var(--container));
+	}
+}
+
+@media (max-width: 430px) {
+	.container {
+		width: min(calc(100% - 28px), var(--container));
+	}
+}
+
+@media (max-width: 390px) {
+	.container {
+		width: min(calc(100% - 24px), var(--container));
+	}
+}
+
+@media (max-width: 360px) {
+	.container {
+		width: min(calc(100% - 20px), var(--container));
+	}
+}

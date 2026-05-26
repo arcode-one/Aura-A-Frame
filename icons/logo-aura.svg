@@ -1,0 +1,18 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" rx="24" fill="#ffffff"/>
+
+  <!-- Mountains -->
+  <path d="M18 88L38 52L58 88H18Z" fill="#111111"/>
+  <path d="M42 88L68 40L94 88H42Z" fill="#111111"/>
+
+  <!-- A-frame -->
+  <path d="M54 88L64 58L74 88H54Z" fill="#ffffff"/>
+  <path d="M64 58L54 88H58L64 70L70 88H74L64 58Z" fill="#111111"/>
+
+  <!-- Trees -->
+  <path d="M96 88L102 74L108 88H96Z" fill="#111111"/>
+  <path d="M8 88L14 74L20 88H8Z" fill="#111111"/>
+
+  <!-- Ground -->
+  <rect x="12" y="92" width="104" height="4" rx="2" fill="#111111"/>
+</svg>

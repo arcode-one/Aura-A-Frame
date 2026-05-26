@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Премиальные A-frame домики на природе: чан, баня, бассейн, мангальная зона, терраса и онлайн-бронирование."
+		/>
+		<title>Aura A-Frame — отдых, в который хочется сбежать</title>
+		<link rel="icon" href="icons/favicon-aura.svg" type="image/svg+xml" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="module" src="js/main.js"></script>
+	</head>
+	<body class="page">
+		<header class="header container">
+			<div class="header__logo">
+				<a class="header__logo-link" href="#top" aria-label="Aura A-Frame">
+					<img src="icons/logo-aura.svg" alt="Aura A-Frame logo" />
+				</a>
+				<span class="header__logo-text">Aura A-Frame</span>
+			</div>
+
+			<nav class="nav" id="header-nav" aria-label="Основная навигация">
+				<a class="nav__link" href="#cabins">Домики</a>
+				<a class="nav__link" href="#why-aura">Почему Aura</a>
+				<a class="nav__link" href="#scenarios">Сценарии</a>
+				<a class="nav__link" href="#comfort">Удобства</a>
+				<a class="nav__link" href="#location">Локация</a>
+			</nav>
+
+			<div class="header__contact">
+				<a class="header__phone" href="tel:+79997079977">
+					<svg aria-hidden="true">
+						<use href="icons/sprite.svg#icon-phone"></use>
+					</svg>
+					<span>+7 (999) 707-99-77</span>
+				</a>
+				<button
+					class="header__menu-toggle"
+					type="button"
+					aria-expanded="false"
+					aria-controls="header-nav"
+					aria-label="Открыть меню"
+				>
+					<span class="header__menu-icon" aria-hidden="true"></span>
+				</button>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero" id="top">
+				<div class="hero__frame">
+					<div class="hero__media" data-parallax="0.18">
+						<img
+							src="images/hero-aura.webp"
+							alt="A-frame домик рядом с лесом"
+						/>
+					</div>
+					<div class="hero__gradient"></div>
+
+					<div class="hero__content">
+						<header class="hero__lead reveal">
+							<h1 class="hero__title">
+								<span>Ближе</span><span>к тишине</span>
+							</h1>
+							<p class="hero__text">
+								Современный загородный отдых с атмосферой тишины, возможностью
+								готовить на огне в отдельной мангальной зоне и полной
+								перезагрузки для себя.
+							</p>
+							<div class="hero__buttons">
+								<a class="button button--ghost hero__button" href="#booking"
+									><svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-calendar"></use>
+									</svg>
+									<span>Забронировать домик</span></a
+								>
+							</div>
+							<ul class="hero__features" aria-label="Преимущества домиков">
+								<li class="hero__feature">
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-guests"></use>
+									</svg>
+									<span>1-8 гостей</span>
+								</li>
+								<li class="hero__feature">
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-sauna"></use>
+									</svg>
+									<span>Баня</span>
+								</li>
+								<li class="hero__feature">
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-hot-tub"></use>
+									</svg>
+									<span>Чан</span>
+								</li>
+								<li class="hero__feature">
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-pool"></use>
+									</svg>
+									<span>Теплый бассейн</span>
+								</li>
+							</ul>
+							<p class="hero__meta">
+								<svg aria-hidden="true">
+									<use href="icons/sprite.svg#icon-pin"></use>
+								</svg>
+								<span>60 минут от Казани</span>
+							</p>
+						</header>
+					</div>
+
+					<a
+						class="hero__scroll"
+						href="#cabins"
+						aria-label="Прокрутить к домикам"
+					></a>
+				</div>
+			</section>
+			<section class="section stays container" id="cabins">
+				<header class="section__head reveal">
+					<div class="section__intro">
+						<span class="eyebrow">Домики</span>
+						<h2 class="section__title">
+							Место, где начинается настоящий отдых.
+						</h2>
+					</div>
+					<p class="section__text">
+						Для уютных вечеров среди природы, спокойного отдыха без шума города,
+						готовки на огне в отдельной мангальной зоне и полной перезагрузки в
+						комфортной атмосфере.
+					</p>
+				</header>
+
+				<div class="stays__grid">
+					<article class="stay-card reveal">
+						<figure class="stay-card__image">
+							<img
+								loading="lazy"
+								src="images/A-01.webp"
+								alt="A-frame домик Pine"
+							/>
+						</figure>
+						<div class="stay-card__content">
+							<div class="stay-card__info">
+								<h3 class="stay-card__name">A-01</h3>
+								<span class="stay-card__meta"
+									>до 2 гостей, баня, терраса, завтрак у окна</span
+								>
+							</div>
+							<div class="stay-card__price">от 19 800 ₽ / сутки</div>
+						</div>
+					</article>
+
+					<article class="stay-card reveal">
+						<figure class="stay-card__image">
+							<img
+								loading="lazy"
+								src="images/A-02.webp"
+								alt="A-frame домик Aurora"
+							/>
+						</figure>
+						<div class="stay-card__content">
+							<div class="stay-card__info">
+								<h3 class="stay-card__name">A-02</h3>
+								<span class="stay-card__meta"
+									>до 4 гостей, чан, мангальная зона, вид на закат</span
+								>
+							</div>
+							<div class="stay-card__price">от 22 700 ₽ / сутки</div>
+						</div>
+					</article>
+
+					<article class="stay-card reveal">
+						<figure class="stay-card__image">
+							<img
+								loading="lazy"
+								src="images/A-03.webp"
+								alt="A-frame домик Ember"
+							/>
+						</figure>
+						<div class="stay-card__content">
+							<div class="stay-card__info">
+								<h3 class="stay-card__name">A-03</h3>
+								<span class="stay-card__meta"
+									>до 6 гостей, бассейн, мангал, вечер для двоих</span
+								>
+							</div>
+							<div class="stay-card__price">от 24 900 ₽ / сутки</div>
+						</div>
+					</article>
+
+					<article class="stay-card reveal">
+						<figure class="stay-card__image">
+							<img
+								loading="lazy"
+								src="images/A-05.webp"
+								alt="A-frame домик A-04"
+							/>
+						</figure>
+						<div class="stay-card__content">
+							<div class="stay-card__info">
+								<h3 class="stay-card__name">A-04</h3>
+								<span class="stay-card__meta"
+									>до 6 гостей, баня, чан, бассейн, мангальная зона</span
+								>
+							</div>
+							<div class="stay-card__price">от 26 600 ₽ / сутки</div>
+						</div>
+					</article>
+
+					<article class="stay-card reveal">
+						<figure class="stay-card__image">
+							<img
+								loading="lazy"
+								src="images/A-04.webp"
+								alt="A-frame домик A-05"
+							/>
+						</figure>
+						<div class="stay-card__content">
+							<div class="stay-card__info">
+								<h3 class="stay-card__name">A-05</h3>
+								<span class="stay-card__meta"
+									>до 8 гостей, баня, бассейн, отдых с друзьями</span
+								>
+							</div>
+							<div class="stay-card__price">от 29 400 ₽ / сутки</div>
+						</div>
+					</article>
+				</div>
+			</section>
+
+			<section class="section reasons container" id="why-aura">
+				<header class="section__head reveal">
+					<div class="section__intro">
+						<span class="eyebrow">Почему выбирают Aura</span>
+						<h2 class="section__title">
+							Все, что нужно для идеальных выходных.
+						</h2>
+					</div>
+					<p class="section__text">
+						Тишина, эстетика, комфорт и атмосфера настоящего загородного отдыха.
+					</p>
+				</header>
+
+				<div class="reasons__grid">
+					<figure class="reasons__photo reveal" data-parallax="0.03">
+						<img
+							loading="lazy"
+							src="images/A-02.webp"
+							alt="A-frame домик Aura A-Frame"
+						/>
+					</figure>
+					<ol class="reasons__list">
+						<li class="reasons__item reveal">
+							<span class="reasons__num">01</span>
+							<div class="reasons__body">
+								<h3 class="reasons__title">Приватность</h3>
+								<p class="reasons__text">
+									Только природа, тишина и отдых без соседей.
+								</p>
+							</div>
+						</li>
+						<li class="reasons__item reveal">
+							<span class="reasons__num">02</span>
+							<div class="reasons__body">
+								<h3 class="reasons__title">Эстетика</h3>
+								<p class="reasons__text">
+									Теплый свет, дерево и панорамные окна.
+								</p>
+							</div>
+						</li>
+						<li class="reasons__item reveal">
+							<span class="reasons__num">03</span>
+							<div class="reasons__body">
+								<h3 class="reasons__title">Сценарии отдыха</h3>
+								<p class="reasons__text">
+									Баня, чан, бассейн, мангальная зона и всё для спокойного
+									отдыха на природе.
+								</p>
+							</div>
+						</li>
+						<li class="reasons__item reveal">
+							<span class="reasons__num">04</span>
+							<div class="reasons__body">
+								<h3 class="reasons__title">Бронь онлайн</h3>
+								<p class="reasons__text">
+									Выберите дату — остальное подготовим мы.
+								</p>
+							</div>
+						</li>
+					</ol>
+				</div>
+			</section>
+
+			<section class="section escape-modes container" id="scenarios">
+				<header class="section__head reveal">
+					<div class="section__intro">
+						<span class="eyebrow">Сценарии отдыха</span>
+						<h2 class="section__title">
+							Для тишины, близости, перезагрузки и тёплых встреч.
+						</h2>
+					</div>
+					<p class="section__text">
+						У нас есть форматы для тихого отдыха вдвоём, перезагрузки в
+						одиночестве и тёплых выходных компанией.
+					</p>
+				</header>
+
+				<div class="escape-modes__grid">
+					<article class="escape-card reveal">
+						<span class="escape-card__tag">Для двоих</span>
+						<h3 class="escape-card__title">Выходные только друг для друга</h3>
+						<p class="escape-card__text">
+							Тёплый чан вечером, мягкий свет внутри, поздний завтрак и тишина,
+							в которой можно просто побыть рядом.
+						</p>
+						<ul class="escape-card__list">
+							<li>домик с террасой, панорамой и уютным светом</li>
+							<li>идеально для годовщины, сюрприза или спонтанного выезда</li>
+						</ul>
+					</article>
+
+					<article class="escape-card reveal">
+						<span class="escape-card__tag">Для одного гостя</span>
+						<h3 class="escape-card__title">Перезагрузка в своём темпе</h3>
+						<p class="escape-card__text">
+							Когда хочется выдохнуть, читать у окна, гулять без маршрута и
+							наконец вернуть себе спокойный внутренний ритм.
+						</p>
+						<ul class="escape-card__list">
+							<li>неторопливые утра, прогулки и тишина без спешки</li>
+							<li>минимум лишнего, максимум воздуха, света и покоя</li>
+						</ul>
+					</article>
+
+					<article class="escape-card reveal">
+						<span class="escape-card__tag">Для компании</span>
+						<h3 class="escape-card__title">Тёплые выходные вместе</h3>
+						<p class="escape-card__text">
+							Баня, бассейн, отдельная мангальная зона для шашлыка и горячих
+							блюд, а ещё то самое редкое чувство, когда никто никуда не
+							торопится.
+						</p>
+						<ul class="escape-card__list">
+							<li>домики для семьи или компании до 8 гостей</li>
+							<li>формат для праздника, отдыха с друзьями и готовки на огне</li>
+						</ul>
+					</article>
+				</div>
+			</section>
+
+			<section class="section amenities container" id="comfort">
+				<header class="section__head reveal">
+					<div class="section__intro">
+						<span class="eyebrow">Удобства</span>
+						<h2 class="section__title">
+							Здесь продумано всё, что помогает выдохнуть.
+						</h2>
+					</div>
+					<p class="section__text">
+						Без лишнего шума. Только тепло, вода, дерево, вид из окна и
+						ощущение, что вы наконец-то выдохнули.
+					</p>
+				</header>
+
+				<div class="amenities__grid">
+					<article class="amenity reveal">
+						<div class="amenity__icon">
+							<svg aria-hidden="true">
+								<use href="icons/sprite.svg#icon-hot-tub"></use>
+							</svg>
+						</div>
+						<h3 class="amenity__title">Чан</h3>
+						<p class="amenity__text">Горячая вода, пар и небо над головой.</p>
+					</article>
+					<article class="amenity reveal">
+						<div class="amenity__icon">
+							<svg aria-hidden="true">
+								<use href="icons/sprite.svg#icon-sauna"></use>
+							</svg>
+						</div>
+						<h3 class="amenity__title">Баня</h3>
+						<p class="amenity__text">
+							Глубокий жар и тишина после долгой прогулки.
+						</p>
+					</article>
+					<article class="amenity reveal">
+						<div class="amenity__icon">
+							<svg aria-hidden="true">
+								<use href="icons/sprite.svg#icon-pool"></use>
+							</svg>
+						</div>
+						<h3 class="amenity__title">Бассейн</h3>
+						<p class="amenity__text">Прохладная вода в контрасте с закатом.</p>
+					</article>
+					<article class="amenity reveal">
+						<div class="amenity__icon">
+							<svg aria-hidden="true">
+								<use href="icons/sprite.svg#icon-wifi"></use>
+							</svg>
+						</div>
+						<h3 class="amenity__title">Wi‑Fi</h3>
+						<p class="amenity__text">
+							На случай, если хочется работать красиво.
+						</p>
+					</article>
+					<article class="amenity reveal">
+						<div class="amenity__icon">
+							<svg aria-hidden="true">
+								<use href="icons/sprite.svg#icon-windows"></use>
+							</svg>
+						</div>
+						<h3 class="amenity__title">Окна</h3>
+						<p class="amenity__text">Панорама вместо телевизора.</p>
+					</article>
+					<article class="amenity reveal">
+						<div class="amenity__icon">
+							<svg aria-hidden="true">
+								<use href="icons/sprite.svg#icon-terrace"></use>
+							</svg>
+						</div>
+						<h3 class="amenity__title">Терраса</h3>
+						<p class="amenity__text">
+							Кофе утром, плед вечером, воздух всегда.
+						</p>
+					</article>
+					<article class="amenity reveal">
+						<div class="amenity__icon">
+							<svg aria-hidden="true">
+								<use href="icons/sprite.svg#icon-grill"></use>
+							</svg>
+						</div>
+						<h3 class="amenity__title">Мангальная зона</h3>
+						<p class="amenity__text">
+							Отдельная зона для стейков, рыбы и уютной готовки на огне.
+						</p>
+					</article>
+					<article class="amenity reveal">
+						<div class="amenity__icon">
+							<svg aria-hidden="true">
+								<use href="icons/sprite.svg#icon-fireplace"></use>
+							</svg>
+						</div>
+						<h3 class="amenity__title">Камин</h3>
+						<p class="amenity__text">
+							Мягкий свет, тепло и вечер, который не хочется заканчивать.
+						</p>
+					</article>
+				</div>
+			</section>
+
+			<section class="section location container" id="location">
+				<header class="section__head reveal">
+					<div class="section__intro">
+						<span class="eyebrow">Локация</span>
+						<h2 class="section__title">
+							Всего 60 минут — и вы уже в другой атмосфере.
+						</h2>
+					</div>
+					<p class="section__text">
+						Тихая природная локация без городского шума, но достаточно близко
+						для спонтанных выходных.
+					</p>
+				</header>
+
+				<div class="location__grid">
+					<div class="location__panel reveal">
+						<div class="location__map">
+							<script
+								type="text/javascript"
+								charset="utf-8"
+								async
+								src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A93c38f13d68d3254a1ed4cbdf954bd50c2e7dd6a999a89604825c941fec6e494&amp;width=100%25&amp;height=456&amp;lang=ru_RU&amp;scroll=true"
+							></script>
+						</div>
+					</div>
+
+					<div class="location__content">
+						<div class="location__list">
+							<article class="location__item reveal">
+								<h3 class="location__item-title">Что рядом</h3>
+								<p class="location__item-text">
+									Природа, лесные тропы и атмосфера спокойствия вокруг домиков.
+								</p>
+							</article>
+							<article class="location__item reveal">
+								<h3 class="location__item-title">Подъезд</h3>
+								<p class="location__item-text">
+									Быстрый маршрут из города без долгой и утомительной дороги.
+								</p>
+							</article>
+							<article class="location__item reveal">
+								<h3 class="location__item-title">Для выходных без спешки</h3>
+								<p class="location__item-text">
+									Идеальное место для спонтанных поездок и спокойных выходных.
+								</p>
+							</article>
+						</div>
+
+						<div class="location__actions reveal">
+							<a class="button button--light" href="#booking">Выбрать даты</a>
+							<a class="button button--ghost" href="#faq">Посмотреть FAQ</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section reviews container">
+				<header class="section__head reveal">
+					<div class="section__intro">
+						<span class="eyebrow">Отзывы</span>
+						<h2 class="section__title">
+							Впечатления гостей после отдыха в Aura.
+						</h2>
+					</div>
+					<nav class="reviews__controls" aria-label="Навигация по отзывам">
+						<button
+							class="reviews__button reviews__button--prev"
+							type="button"
+							aria-label="Предыдущие отзывы"
+						>
+							<span></span>
+						</button>
+						<button
+							class="reviews__button reviews__button--next"
+							type="button"
+							aria-label="Следующие отзывы"
+						>
+							<span></span>
+						</button>
+					</nav>
+				</header>
+
+				<div class="reviews__slider reveal">
+					<div class="reviews__viewport">
+						<div class="reviews__track">
+							<article class="review">
+								<div class="review__stars" aria-label="5 из 5">
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+								</div>
+								<p class="review__text">
+									«Будто приехали в кадр из фильма. Очень красиво, спокойно,
+									чисто. Чан вечером — отдельная магия».
+								</p>
+								<p class="review__name">Анна и Марк</p>
+							</article>
+							<article class="review">
+								<div class="review__stars" aria-label="5 из 5">
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+								</div>
+								<p class="review__text">
+									«Минимум лишнего, максимум ощущения отдыха. Просыпаться с
+									видом на лес — лучше любого отеля».
+								</p>
+								<p class="review__name">Илья</p>
+							</article>
+							<article class="review">
+								<div class="review__stars" aria-label="5 из 5">
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+								</div>
+								<p class="review__text">
+									«Сайт не передает половины атмосферы. Вживую здесь ещё тише,
+									теплее и дороже по ощущению».
+								</p>
+								<p class="review__name">Екатерина</p>
+							</article>
+							<article class="review">
+								<div class="review__stars" aria-label="5 из 5">
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+								</div>
+								<p class="review__text">
+									«Приехали на одну ночь, а уже планируем вернуться на три.
+									Очень красиво, тихо и действительно уютно».
+								</p>
+								<p class="review__name">Марина</p>
+							</article>
+							<article class="review">
+								<div class="review__stars" aria-label="5 из 5">
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+								</div>
+								<p class="review__text">
+									«Редкое место, где фото на сайте не преувеличивают. Вживую всё
+									ещё красивее и спокойнее».
+								</p>
+								<p class="review__name">Руслан</p>
+							</article>
+							<article class="review">
+								<div class="review__stars" aria-label="5 из 5">
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+								</div>
+								<p class="review__text">
+									«Очень понравилось, что отдых начинается сразу: заезд
+									понятный, домик тёплый, территория ухоженная».
+								</p>
+								<p class="review__name">Ольга и Денис</p>
+							</article>
+							<article class="review">
+								<div class="review__stars" aria-label="5 из 5">
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+								</div>
+								<p class="review__text">
+									«Бассейн, баня и тишина вокруг дают именно то чувство
+									загородного отдыха, за которым и ехали».
+								</p>
+								<p class="review__name">Алина</p>
+							</article>
+							<article class="review">
+								<div class="review__stars" aria-label="5 из 5">
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+								</div>
+								<p class="review__text">
+									«Праздновали день рождения небольшой компанией. Места
+									достаточно, атмосфера камерная и очень тёплая».
+								</p>
+								<p class="review__name">Павел</p>
+							</article>
+							<article class="review">
+								<div class="review__stars" aria-label="5 из 5">
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+								</div>
+								<p class="review__text">
+									«Тихое место без суеты. Утром кофе на террасе, вечером тёплая
+									вода и полное ощущение, что город далеко».
+								</p>
+								<p class="review__name">Виктория</p>
+							</article>
+							<article class="review">
+								<div class="review__stars" aria-label="5 из 5">
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+									<svg aria-hidden="true">
+										<use href="icons/sprite.svg#icon-star"></use>
+									</svg>
+								</div>
+								<p class="review__text">
+									«Очень красивый свет внутри, приятные детали и ощущение, что
+									всё продумано именно для спокойного отдыха».
+								</p>
+								<p class="review__name">Никита и София</p>
+							</article>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="section faq" id="faq">
+				<div class="faq__panel reveal">
+					<header class="section__head faq__head">
+						<div class="faq__intro">
+							<span class="eyebrow">FAQ</span>
+							<h2 class="section__title">Перед поездкой.</h2>
+						</div>
+						<p class="section__text faq__lead">
+							Собрали ответы на самые частые вопросы, чтобы перед бронированием
+							у вас не оставалось лишней неопределенности.
+						</p>
+					</header>
+
+					<div class="faq__list">
+						<article class="faq__item">
+							<button class="faq__question" type="button" aria-expanded="false">
+								<span>Можно ли приехать с детьми или животными?</span>
+								<span class="faq__icon">+</span>
+							</button>
+							<div class="faq__answer">
+								<p>
+									Да. Домики подходят для спокойного семейного отдыха, а
+									размещение с животными возможно по согласованию. Мы заранее
+									подскажем подходящий домик и условия проживания.
+								</p>
+							</div>
+						</article>
+						<article class="faq__item">
+							<button class="faq__question" type="button" aria-expanded="false">
+								<span>Что входит в стоимость проживания?</span>
+								<span class="faq__icon">+</span>
+							</button>
+							<div class="faq__answer">
+								<p>
+									В стоимость уже входит проживание в выбранном домике,
+									постельное бельё, полотенца, базовая посуда и всё для
+									комфортного отдыха. Мангальная зона и территория доступны для
+									спокойных вечеров, а дополнительные опции вроде бани, чана или
+									специальных сценариев уточняются отдельно.
+								</p>
+							</div>
+						</article>
+						<article class="faq__item">
+							<button class="faq__question" type="button" aria-expanded="false">
+								<span>Баня, чан и бассейн входят в стоимость?</span>
+								<span class="faq__icon">+</span>
+							</button>
+							<div class="faq__answer">
+								<p>
+									Это зависит от выбранного домика и формата бронирования.
+									Мангальная зона доступна на территории, а баня, чан и бассейн
+									в некоторых вариантах уже включены, в других подключаются как
+									дополнительные опции. Всё уточняем заранее перед
+									подтверждением.
+								</p>
+							</div>
+						</article>
+						<article class="faq__item">
+							<button class="faq__question" type="button" aria-expanded="false">
+								<span>На сколько гостей рассчитаны домики?</span>
+								<span class="faq__icon">+</span>
+							</button>
+							<div class="faq__answer">
+								<p>
+									У нас есть варианты для отдыха от 1 до 8 гостей. Можно выбрать
+									компактный формат для двоих или просторный домик для семьи и
+									компании.
+								</p>
+							</div>
+						</article>
+						<article class="faq__item">
+							<button class="faq__question" type="button" aria-expanded="false">
+								<span>Как проходит заезд и бронирование?</span>
+								<span class="faq__icon">+</span>
+							</button>
+							<div class="faq__answer">
+								<p>
+									Вы оставляете заявку, мы подтверждаем свободные даты,
+									выбранный домик и детали отдыха. После этого отправляем всю
+									информацию по заезду, чтобы вы приехали спокойно и без лишних
+									звонков.
+								</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="section booking container" id="booking">
+				<div class="booking__panel reveal">
+					<header class="section__head booking__head">
+						<div class="section__intro">
+							<span class="eyebrow">Онлайн-бронирование</span>
+							<h2 class="section__title">Отдых начинается с выбора даты.</h2>
+						</div>
+						<p class="section__text">
+							Всего несколько шагов — и ваш отдых среди природы будет полностью
+							готов к вашему приезду.
+						</p>
+					</header>
+
+					<form class="booking__form">
+						<label class="field field--date">
+							<span class="field__label">Дата заезда</span>
+							<input
+								class="field__control field__control--date"
+								type="text"
+								placeholder="ДД.ММ.ГГГГ"
+								inputmode="none"
+								autocomplete="off"
+								readonly
+								data-date-input="checkin"
+								required
+							/>
+						</label>
+						<label class="field field--date">
+							<span class="field__label">Дата выезда</span>
+							<input
+								class="field__control field__control--date"
+								type="text"
+								placeholder="ДД.ММ.ГГГГ"
+								inputmode="none"
+								autocomplete="off"
+								readonly
+								data-date-input="checkout"
+								required
+							/>
+						</label>
+						<label class="field">
+							<span class="field__label">Гостей</span>
+							<select class="field__control" required>
+								<option>1 гость</option>
+								<option>2 гостя</option>
+								<option>3 гостя</option>
+								<option>4 гостя</option>
+								<option>5 гостей</option>
+								<option>6 гостей</option>
+								<option>7 гостей</option>
+								<option>8 гостей</option>
+							</select>
+						</label>
+						<label class="field">
+							<span class="field__label">Домик</span>
+							<select class="field__control" required>
+								<option>A-01</option>
+								<option>A-02</option>
+								<option>A-03</option>
+								<option>A-04</option>
+								<option>A-05</option>
+							</select>
+						</label>
+						<button
+							class="button button--light booking__button"
+							type="button"
+							data-open-booking-modal
+						>
+							Забронировать
+						</button>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer container">
+			<div class="footer__inner">
+				<div class="footer__logo">
+					<a class="footer__logo-link" href="#top" aria-label="Aura A-Frame">
+						<img src="icons/logo-aura.svg" alt="Aura A-Frame logo" />
+					</a>
+					<span class="footer__logo-text">Aura A-Frame</span>
+				</div>
+				<p class="footer__note">Concept Design & Development — ArCode</p>
+			</div>
+		</footer>
+
+		<a class="quick-request" href="#top" aria-label="Запросить похожий проект">
+			<span>Хочу такой же</span>
+		</a>
+
+		<div class="booking-request" hidden>
+			<div class="booking-request__overlay" data-close-booking-modal></div>
+			<div
+				class="booking-request__panel"
+				role="dialog"
+				aria-modal="true"
+				aria-labelledby="booking-request-title"
+			>
+				<button
+					class="booking-request__close"
+					type="button"
+					aria-label="Закрыть окно"
+					data-close-booking-modal
+				>
+					<span class="booking-request__close-icon" aria-hidden="true"></span>
+				</button>
+
+				<div class="booking-request__intro">
+					<span class="eyebrow">Бронирование</span>
+					<h2 class="booking-request__title" id="booking-request-title">
+						Оставьте контакты.
+					</h2>
+					<p class="booking-request__text">
+						Мы подтвердим свободные даты и подготовим все к вашему приезду.
+					</p>
+				</div>
+
+				<form class="booking-request__form">
+					<label class="field">
+						<span class="field__label">Имя</span>
+						<input
+							class="field__control"
+							type="text"
+							name="name"
+							placeholder="Ваше имя"
+							required
+						/>
+					</label>
+					<label class="field">
+						<span class="field__label">Телефон</span>
+						<input
+							class="field__control"
+							type="tel"
+							name="phone"
+							placeholder="+7 (___) ___-__-__"
+							required
+						/>
+					</label>
+					<label class="field booking-request__comment">
+						<span class="field__label">Комментарий</span>
+						<textarea
+							class="field__control booking-request__comment-input"
+							name="comment"
+							placeholder="Пожелания к отдыху или дополнительные детали"
+							rows="4"
+						></textarea>
+					</label>
+					<button
+						class="button button--light booking-request__action"
+						type="submit"
+					>
+						Подтвердить бронирование
+					</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

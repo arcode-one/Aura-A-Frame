@@ -1,0 +1,382 @@
+.reviews {
+	overflow: hidden;
+}
+
+.reviews .section__head {
+	align-items: end;
+}
+
+.reviews__controls {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.reviews__button {
+	position: relative;
+	width: 48px;
+	height: 48px;
+	padding: 0;
+	border: 1px solid rgba(255, 255, 255, 0.14);
+	border-radius: 999px;
+	background: rgba(255, 255, 255, 0.04);
+	color: var(--white);
+	cursor: pointer;
+	transition:
+		transform 0.35s var(--ease),
+		border-color 0.35s var(--ease),
+		background 0.35s var(--ease),
+		box-shadow 0.35s var(--ease);
+}
+
+.reviews__button span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 11px;
+	height: 11px;
+	border-top: 1.8px solid currentColor;
+	border-right: 1.8px solid currentColor;
+}
+
+.reviews__button--prev span {
+	transform: translate(-35%, -50%) rotate(-135deg);
+}
+
+.reviews__button--next span {
+	transform: translate(-65%, -50%) rotate(45deg);
+}
+
+.reviews__button:hover,
+.reviews__button:focus-visible {
+	border-color: rgba(233, 161, 79, 0.42);
+	background: rgba(255, 255, 255, 0.08);
+	box-shadow: 0 16px 40px rgba(233, 161, 79, 0.12);
+}
+
+.reviews__button--prev:hover,
+.reviews__button--prev:focus-visible {
+	transform: translateX(-4px);
+}
+
+.reviews__button--next:hover,
+.reviews__button--next:focus-visible {
+	transform: translateX(4px);
+}
+
+.reviews__slider {
+	position: relative;
+	overflow: visible;
+	padding-inline: 0;
+	padding-top: 2px;
+	padding-bottom: 8px;
+	box-sizing: border-box;
+}
+
+.reviews__viewport {
+	width: calc(100% - 48px);
+	margin: 0 auto;
+	overflow: visible;
+	padding-inline: 0;
+	padding-top: 2px;
+	padding-bottom: 8px;
+	box-sizing: border-box;
+	overscroll-behavior-x: contain;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+}
+
+.reviews__track {
+	display: flex;
+	align-items: stretch;
+	gap: 18px;
+	padding-bottom: 1px;
+	will-change: transform;
+	touch-action: pan-y;
+	user-select: none;
+	cursor: grab;
+}
+
+.reviews__track.is-dragging {
+	cursor: grabbing;
+}
+
+.review {
+	flex: 0 0 calc((100% - 36px) / 3);
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	padding: 28px;
+	min-height: 260px;
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	border-radius: 30px;
+	background: rgba(255, 255, 255, 0.045);
+	opacity: 0.18;
+	filter: blur(8px);
+	transform: scale(0.92);
+	transition:
+		background 0.4s var(--ease),
+		border-color 0.4s var(--ease),
+		filter 0.4s var(--ease),
+		opacity 0.4s var(--ease),
+		transform 0.4s var(--ease);
+}
+
+.review.is-active {
+	background: rgba(255, 255, 255, 0.05);
+	border-color: rgba(255, 255, 255, 0.16);
+	opacity: 1;
+	filter: none;
+	transform: none;
+}
+
+.review.is-edge {
+	background: rgba(255, 255, 255, 0.045);
+	border-color: rgba(255, 255, 255, 0.12);
+	opacity: 0.42;
+	filter: blur(5px);
+	transform: scale(0.96);
+}
+
+.review__stars {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin-bottom: 24px;
+	color: var(--amber);
+}
+
+.review__stars svg {
+	width: 16px;
+	height: 16px;
+	display: block;
+	fill: currentColor;
+}
+
+.review__text {
+	flex: 1;
+	margin-bottom: 24px;
+	color: rgba(246, 241, 232, 0.82);
+	line-height: 1.7;
+}
+
+.review__name {
+	margin-top: auto;
+	align-self: flex-end;
+	text-align: right;
+	color: rgba(246, 241, 232, 0.58);
+}
+
+@media (max-width: 1440px) {
+	.reviews__slider {
+		padding-inline: 0;
+	}
+
+	.reviews__viewport {
+		width: calc(100% - 40px);
+	}
+}
+
+@media (max-width: 1200px) {
+	.reviews__slider {
+		overflow: hidden;
+		padding-inline: 18px;
+	}
+
+	.reviews__viewport {
+		width: auto;
+		margin: 0;
+		overflow: hidden;
+		padding-inline: 4px;
+	}
+
+	.review {
+		flex-basis: calc((100% - 36px) / 3);
+		opacity: 1;
+		filter: none;
+		transform: none;
+	}
+}
+
+@media (max-width: 1024px) {
+	.reviews__slider {
+		padding-inline: 16px;
+	}
+
+	.reviews__viewport {
+		overflow: hidden;
+		padding-inline: 4px;
+	}
+
+	.review {
+		flex-basis: calc((100% - 36px) / 3);
+		opacity: 1;
+		filter: none;
+		transform: none;
+	}
+}
+
+@media (max-width: 992px) {
+	.reviews__slider {
+		padding-inline: 15px;
+	}
+
+	.review {
+		padding: 22px;
+		min-height: 232px;
+	}
+}
+
+@media (max-width: 820px) {
+	.review {
+		flex-basis: calc((100% - 14px) / 2);
+	}
+}
+
+@media (max-width: 768px) {
+	.reviews .section__head {
+		display: flex;
+		align-items: end;
+		justify-content: space-between;
+		gap: 16px;
+	}
+
+	.reviews__button {
+		width: 44px;
+		height: 44px;
+	}
+
+	.reviews__slider {
+		padding-inline: 14px;
+	}
+
+	.reviews__viewport {
+		padding-inline: 3px;
+	}
+
+	.review {
+		flex-basis: calc((100% - 14px - 6px) / 2);
+		padding: 24px;
+		min-height: 240px;
+		border-radius: 26px;
+	}
+}
+
+@media (max-width: 640px) {
+	.reviews .section__head {
+		gap: 14px;
+	}
+
+	.reviews__controls {
+		gap: 8px;
+	}
+
+	.reviews__button {
+		width: 40px;
+		height: 40px;
+	}
+
+	.reviews__button span {
+		width: 9px;
+		height: 9px;
+	}
+
+	.reviews__slider {
+		padding-inline: 12px;
+	}
+
+	.reviews__viewport {
+		padding-inline: 2px;
+	}
+
+	.reviews__track {
+		gap: 14px;
+	}
+
+	.review {
+		flex-basis: calc((100% - 14px) / 2);
+		padding: 20px;
+		min-height: 220px;
+	}
+
+	.review__stars,
+	.review__text {
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 576px) {
+	.reviews .section__head {
+		display: block;
+	}
+
+	.reviews__controls {
+		margin-top: 16px;
+	}
+
+	.review {
+		flex-basis: 100%;
+	}
+}
+
+@media (max-width: 430px) {
+	.reviews__slider {
+		padding-inline: 10px;
+	}
+
+	.reviews__viewport {
+		padding-inline: 1px;
+	}
+
+	.review {
+		flex-basis: 100%;
+		padding: 18px;
+		min-height: 210px;
+	}
+
+	.review__text {
+		line-height: 1.6;
+	}
+}
+
+@media (max-width: 390px) {
+	.reviews .section__head {
+		display: block;
+	}
+
+	.reviews__controls {
+		margin-top: 18px;
+	}
+
+	.reviews__slider {
+		padding-inline: 10px;
+	}
+
+	.reviews__viewport {
+		padding-inline: 2px;
+	}
+
+	.review {
+		flex-basis: 100%;
+		padding: 18px;
+		min-height: 210px;
+	}
+
+	.review__text {
+		line-height: 1.6;
+	}
+}
+
+@media (max-width: 360px) {
+	.reviews__slider {
+		padding-inline: 8px;
+	}
+
+	.reviews__viewport {
+		padding-inline: 1px;
+	}
+
+	.review {
+		flex-basis: 100%;
+	}
+}

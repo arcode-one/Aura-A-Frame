@@ -1,0 +1,162 @@
+.reasons__grid {
+	display: grid;
+	grid-template-columns: 0.8fr 1.2fr;
+	gap: 22px;
+}
+
+.reasons__photo {
+	min-height: 620px;
+	margin: 0;
+	border-radius: var(--radius-xl);
+	overflow: hidden;
+	border: 1px solid var(--line);
+}
+
+.reasons__list {
+	display: grid;
+	gap: 14px;
+	align-content: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.reasons__item {
+	padding: 22px;
+	border-radius: 28px;
+	border: 1px solid var(--line);
+	background: rgba(255, 255, 255, 0.045);
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 22px;
+	transition: transform 0.55s var(--ease), background 0.55s var(--ease);
+}
+
+.reasons__item:hover {
+	transform: translateX(12px);
+	background: rgba(255, 255, 255, 0.075);
+}
+
+.reasons__num {
+	color: var(--amber);
+	font-size: 14px;
+	letter-spacing: 0.14em;
+}
+
+.reasons__title {
+	margin-bottom: 8px;
+	font-size: 24px;
+	letter-spacing: -0.04em;
+}
+
+.reasons__text {
+	color: rgba(246, 241, 232, 0.62);
+	line-height: 1.65;
+}
+
+@media (max-width: 1440px) {
+	.reasons__item {
+		padding: 21px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.reasons__item {
+		padding: 20px;
+	}
+
+	.reasons__title {
+		font-size: 22px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.reasons__item {
+		padding: 18px;
+		gap: 18px;
+	}
+
+	.reasons__title {
+		font-size: 21px;
+	}
+}
+
+@media (max-width: 992px) {
+	.reasons__grid {
+		gap: 18px;
+	}
+
+	.reasons__item {
+		padding: 17px;
+	}
+}
+
+@media (max-width: 820px) {
+	.reasons__photo {
+		min-height: 520px;
+	}
+}
+
+@media (max-width: 768px) {
+	.reasons__grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 640px) {
+	.reasons__photo {
+		min-height: 410px;
+		height: 410px;
+	}
+
+	.reasons__item {
+		padding: 16px;
+		grid-template-columns: 1fr;
+		gap: 10px;
+		border-radius: 24px;
+	}
+
+	.reasons__title {
+		font-size: 20px;
+		margin-bottom: 6px;
+	}
+}
+
+@media (max-width: 576px) {
+	.reasons__photo {
+		min-height: 360px;
+		height: 360px;
+	}
+
+	.reasons__item {
+		padding: 15px;
+	}
+}
+
+@media (max-width: 390px) {
+	.reasons__item {
+		padding: 14px;
+	}
+
+	.reasons__title {
+		font-size: 18px;
+	}
+
+	.reasons__text {
+		line-height: 1.55;
+	}
+}
+
+@media (max-width: 360px) {
+	.reasons__item {
+		padding: 12px;
+	}
+
+	.reasons__title {
+		font-size: 17px;
+	}
+
+	.reasons__text {
+		font-size: 14px;
+	}
+}
