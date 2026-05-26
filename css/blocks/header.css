@@ -239,7 +239,7 @@
 		width: min(calc(100% - 64px), 1400px);
 	}
 
-	.header .nav {
+	.header.menu-ready .nav {
 		position: absolute;
 		top: calc(100% + 12px);
 		right: 24px;
@@ -270,14 +270,14 @@
 		font-size: 14px;
 	}
 
-	.header.is-open .nav {
+	.header.menu-ready.is-open .nav {
 		transform: translateY(0);
 		opacity: 1;
 		visibility: visible;
 		pointer-events: auto;
 	}
 
-	.header__menu-toggle {
+	.header.menu-ready .header__menu-toggle {
 		display: inline-flex;
 	}
 }

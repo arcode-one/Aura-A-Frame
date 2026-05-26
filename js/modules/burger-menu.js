@@ -7,6 +7,8 @@ export function initBurgerMenu() {
 		return;
 	}
 
+	header.classList.add("menu-ready");
+
 	const mediaQuery = window.matchMedia("(max-width: 1200px)");
 
 	function closeMenu() {

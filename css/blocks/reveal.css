@@ -1,4 +1,10 @@
 .reveal {
+	opacity: 1;
+	transform: none;
+	filter: none;
+}
+
+.reveal.is-pending {
 	opacity: 0;
 	transform: translateY(34px) scale(0.985);
 	filter: blur(14px);
