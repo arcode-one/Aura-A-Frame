@@ -1,21 +1,30 @@
 .reveal {
 	opacity: 1;
-	transform: none;
+	--reveal-translate-y: 0px;
+	--reveal-scale: 1;
+	--parallax-offset-y: 0px;
+	transform:
+		translate3d(0, var(--reveal-translate-y), 0)
+		translate3d(0, var(--parallax-offset-y), 0)
+		scale(var(--reveal-scale));
 	filter: none;
+	will-change: opacity, transform, filter;
+	transition:
+		opacity 0.85s var(--ease),
+		transform 0.85s var(--ease),
+		filter 0.85s var(--ease);
 }
 
 .reveal.is-pending {
 	opacity: 0;
-	transform: translateY(34px) scale(0.985);
-	filter: blur(14px);
-	transition:
-		opacity 0.9s var(--ease),
-		transform 0.9s var(--ease),
-		filter 0.9s var(--ease);
+	--reveal-translate-y: 24px;
+	--reveal-scale: 0.992;
+	filter: blur(10px);
 }
 
 .reveal.is-visible {
 	opacity: 1;
-	transform: translateY(0) scale(1);
+	--reveal-translate-y: 0px;
+	--reveal-scale: 1;
 	filter: blur(0);
 }

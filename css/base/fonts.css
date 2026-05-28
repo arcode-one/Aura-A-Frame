@@ -3,7 +3,7 @@
 	src:
 		local("Manrope Regular"),
 		local("Manrope-Regular"),
-		url("../../fonts/ManropeRegular.ttf") format("truetype");
+		url("../../fonts/Manrope-Regular.woff2") format("woff2");
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -14,7 +14,7 @@
 	src:
 		local("Manrope SemiBold"),
 		local("Manrope-SemiBold"),
-		url("../../fonts/ManropeSemiBold.ttf") format("truetype");
+		url("../../fonts/Manrope-Semibold.woff2") format("woff2");
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
@@ -25,7 +25,7 @@
 	src:
 		local("Manrope Bold"),
 		local("Manrope-Bold"),
-		url("../../fonts/ManropeBold.ttf") format("truetype");
+		url("../../fonts/Manrope-Bold.woff2") format("woff2");
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;

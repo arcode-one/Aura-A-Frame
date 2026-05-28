@@ -13,7 +13,7 @@ export function initParallax() {
 			const rect = item.getBoundingClientRect();
 			const rawOffset = rect.top * speed;
 			const offset = Math.max(-30, Math.min(30, rawOffset));
-			item.style.transform = `translate3d(0, ${offset}px, 0)`;
+			item.style.setProperty("--parallax-offset-y", `${offset}px`);
 		});
 
 		ticking = false;
