@@ -29,23 +29,36 @@
 				<a class="nav__link" href="#location">Локация</a>
 			</nav>
 
-			<div class="header__contact">
-				<a class="header__phone" href="tel:+79997079977">
-					<svg aria-hidden="true">
-						<use href="icons/sprite.svg#icon-phone"></use>
-					</svg>
-					<span>+7 (999) 707-99-77</span>
-				</a>
-				<button
-					class="header__menu-toggle"
-					type="button"
-					aria-expanded="false"
-					aria-controls="header-nav"
-					aria-label="Открыть меню"
-				>
-					<span class="header__menu-icon" aria-hidden="true"></span>
-				</button>
-			</div>
+				<div class="header__contact">
+					<div class="header__contact-bar">
+						<a
+							class="header__telegram"
+							href="https://t.me/arcode_dev"
+							target="_blank"
+							rel="noreferrer"
+							aria-label="Telegram ArCode"
+						>
+							<svg class="header__telegram-icon" aria-hidden="true">
+								<use href="icons/sprite.svg#icon-telegram"></use>
+							</svg>
+						</a>
+						<a class="header__phone" href="tel:+79997079977">
+							<svg aria-hidden="true">
+								<use href="icons/sprite.svg#icon-phone"></use>
+							</svg>
+							<span>+7 (999) 707-99-77</span>
+						</a>
+					</div>
+					<button
+						class="header__menu-toggle"
+						type="button"
+						aria-expanded="false"
+						aria-controls="header-nav"
+						aria-label="Открыть меню"
+					>
+						<span class="header__menu-icon" aria-hidden="true"></span>
+					</button>
+				</div>
 		</header>
 
 		<main>
@@ -896,62 +909,69 @@
 					</header>
 
 					<form class="booking__form">
-						<label class="field field--date">
-							<span class="field__label">Дата заезда</span>
-							<input
-								class="field__control field__control--date"
-								type="text"
-								placeholder="ДД.ММ.ГГГГ"
-								inputmode="none"
-								autocomplete="off"
-								readonly
-								data-date-input="checkin"
-								required
-							/>
-						</label>
-						<label class="field field--date">
-							<span class="field__label">Дата выезда</span>
-							<input
-								class="field__control field__control--date"
-								type="text"
-								placeholder="ДД.ММ.ГГГГ"
-								inputmode="none"
-								autocomplete="off"
-								readonly
-								data-date-input="checkout"
-								required
-							/>
-						</label>
-						<label class="field">
-							<span class="field__label">Гостей</span>
-							<select class="field__control" required>
-								<option>1 гость</option>
-								<option>2 гостя</option>
-								<option>3 гостя</option>
-								<option>4 гостя</option>
-								<option>5 гостей</option>
-								<option>6 гостей</option>
-								<option>7 гостей</option>
-								<option>8 гостей</option>
-							</select>
-						</label>
-						<label class="field">
-							<span class="field__label">Домик</span>
-							<select class="field__control" required>
-								<option>A-01</option>
-								<option>A-02</option>
-								<option>A-03</option>
-								<option>A-04</option>
-								<option>A-05</option>
-							</select>
-						</label>
-						<button
-							class="button button--light booking__button"
-							type="button"
-							data-open-booking-modal
-						>
-							Забронировать
-						</button>
+						<div class="booking__fields">
+							<label class="field field--date">
+								<span class="field__label">Дата заезда</span>
+								<input
+									class="field__control field__control--date"
+									type="text"
+									placeholder="ДД.ММ.ГГГГ"
+									inputmode="none"
+									autocomplete="off"
+									readonly
+									data-date-input="checkin"
+									required
+								/>
+							</label>
+							<label class="field field--date">
+								<span class="field__label">Дата выезда</span>
+								<input
+									class="field__control field__control--date"
+									type="text"
+									placeholder="ДД.ММ.ГГГГ"
+									inputmode="none"
+									autocomplete="off"
+									readonly
+									data-date-input="checkout"
+									required
+								/>
+							</label>
+							<label class="field">
+								<span class="field__label">Гостей</span>
+								<select class="field__control" required>
+									<option>1 гость</option>
+									<option>2 гостя</option>
+									<option>3 гостя</option>
+									<option>4 гостя</option>
+									<option>5 гостей</option>
+									<option>6 гостей</option>
+									<option>7 гостей</option>
+									<option>8 гостей</option>
+								</select>
+							</label>
+							<label class="field">
+								<span class="field__label">Домик</span>
+								<select class="field__control" required>
+									<option>A-01</option>
+									<option>A-02</option>
+									<option>A-03</option>
+									<option>A-04</option>
+									<option>A-05</option>
+								</select>
+							</label>
+						</div>
+						<div class="booking__actions">
+							<button
+								class="button button--light booking__button"
+								type="button"
+								data-open-booking-modal
+							>
+								Забронировать
+							</button>
+							<p class="booking__note">
+								Без спама и рассылок. Только информация по бронированию.
+							</p>
+						</div>
 					</form>
 				</div>
 			</section>
@@ -965,7 +985,7 @@
 					</a>
 					<span class="footer__logo-text">Aura A-Frame</span>
 				</div>
-				<p class="footer__note">Concept Design & Development — ArCode</p>
+				<p class="footer__note">© 2026 Concept Design & Development — ArCode</p>
 			</div>
 		</footer>
 
