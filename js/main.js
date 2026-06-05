@@ -7,6 +7,7 @@ import { initParallax } from "./modules/parallax.js";
 import { initQuickRequest } from "./modules/quick-request.js";
 import { initReveal } from "./modules/reveal.js";
 import { initReviewsSlider } from "./modules/reviews-marquee.js";
+import { initTelegramLinks } from "./modules/telegram-link.js";
 
 function initApp() {
 	initBurgerMenu();
@@ -18,6 +19,7 @@ function initApp() {
 	initBookingForm();
 	initBookingRequest();
 	initReviewsSlider();
+	initTelegramLinks();
 }
 
 if (document.readyState === "loading") {

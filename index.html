@@ -29,36 +29,39 @@
 				<a class="nav__link" href="#location">Локация</a>
 			</nav>
 
-				<div class="header__contact">
-					<div class="header__contact-bar">
-						<a
-							class="header__telegram"
-							href="https://t.me/arcode_dev"
-							target="_blank"
-							rel="noreferrer"
-							aria-label="Telegram ArCode"
-						>
-							<svg class="header__telegram-icon" aria-hidden="true">
-								<use href="icons/sprite.svg#icon-telegram"></use>
-							</svg>
-						</a>
-						<a class="header__phone" href="tel:+79997079977">
-							<svg aria-hidden="true">
-								<use href="icons/sprite.svg#icon-phone"></use>
-							</svg>
-							<span>+7 (999) 707-99-77</span>
-						</a>
-					</div>
-					<button
-						class="header__menu-toggle"
-						type="button"
-						aria-expanded="false"
-						aria-controls="header-nav"
-						aria-label="Открыть меню"
+			<div class="header__contact">
+				<div class="header__contact-bar">
+					<a
+						class="header__telegram"
+						href="https://t.me/arcode_dev"
+						target="_blank"
+						rel="noreferrer"
+						data-telegram-link
+						data-telegram-fallback="https://t.me/arcode_dev"
+						data-telegram-app="tg://resolve?domain=arcode_dev"
+						aria-label="Telegram ArCode"
 					>
-						<span class="header__menu-icon" aria-hidden="true"></span>
-					</button>
+						<svg class="header__telegram-icon" aria-hidden="true">
+							<use href="icons/sprite.svg#icon-telegram"></use>
+						</svg>
+					</a>
+					<a class="header__phone" href="tel:+79997079977">
+						<svg aria-hidden="true">
+							<use href="icons/sprite.svg#icon-phone"></use>
+						</svg>
+						<span>+7 (999) 707-99-77</span>
+					</a>
 				</div>
+				<button
+					class="header__menu-toggle"
+					type="button"
+					aria-expanded="false"
+					aria-controls="header-nav"
+					aria-label="Открыть меню"
+				>
+					<span class="header__menu-icon" aria-hidden="true"></span>
+				</button>
+			</div>
 		</header>
 
 		<main>
@@ -989,7 +992,13 @@
 			</div>
 		</footer>
 
-		<a class="quick-request" href="#top" aria-label="Запросить похожий проект">
+		<a
+			class="quick-request"
+			href="https://arcode-dev.ru/"
+			target="_blank"
+			rel="noopener noreferrer"
+			aria-label="Запросить похожий проект"
+		>
 			<span>Хочу такой же сайт</span>
 		</a>
 
