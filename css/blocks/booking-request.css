@@ -112,6 +112,22 @@
 	resize: none;
 }
 
+.booking-request__demo-note {
+	margin: 0;
+	padding: 12px 14px;
+	border: 1px solid rgba(233, 161, 79, 0.22);
+	border-radius: 14px;
+	background: rgba(233, 161, 79, 0.07);
+	color: rgba(246, 241, 232, 0.62);
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+.booking-request__demo-note strong {
+	color: rgba(246, 241, 232, 0.9);
+	font-weight: 600;
+}
+
 .booking-request__action {
 	width: 100%;
 	margin-top: 4px;

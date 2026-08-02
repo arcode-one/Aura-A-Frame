@@ -111,9 +111,8 @@
 .header__telegram {
 	width: 38px;
 	height: 38px;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
+	display: inline-grid;
+	place-items: center;
 	border-radius: 50%;
 	color: rgba(246, 241, 232, 0.88);
 	transition:
@@ -122,9 +121,11 @@
 }
 
 .header__telegram-icon {
+	display: block;
 	width: 25px;
 	height: 25px;
 	fill: currentColor;
+	transform: translate(-1px, 0.5px);
 }
 
 .header__telegram:hover,

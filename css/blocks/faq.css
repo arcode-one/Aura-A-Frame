@@ -38,7 +38,7 @@
 .faq__list {
 	display: grid;
 	gap: 14px;
-	max-width: 980px;
+	width: 100%;
 }
 
 .faq__item {
@@ -120,7 +120,7 @@
 }
 
 .faq__answer p {
-	max-width: 760px;
+	width: 100%;
 	padding: 0 26px 24px;
 }
 

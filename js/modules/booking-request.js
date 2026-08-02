@@ -91,12 +91,12 @@ export function initBookingRequest() {
 		}
 
 		const oldText = submit.textContent;
-		submit.textContent = "Заявка отправлена";
+		submit.textContent = "Демо: данные не отправлены";
 
 		setTimeout(() => {
 			submit.textContent = oldText;
 			form.reset();
 			closeModal();
-		}, 1800);
+		}, 2200);
 	});
 }

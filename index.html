@@ -984,7 +984,7 @@
 								Забронировать
 							</button>
 							<p class="booking__note">
-								Без спама и рассылок. Только информация по бронированию.
+								Демо-режим: данные из формы никуда не отправляются.
 							</p>
 						</div>
 					</form>
@@ -994,13 +994,35 @@
 
 		<footer class="footer container">
 			<div class="footer__inner">
-				<div class="footer__logo">
-					<a class="footer__logo-link" href="#top" aria-label="Aura A-Frame">
-						<img src="icons/logo-aura.svg" alt="Aura A-Frame logo" />
+				<nav class="footer__legal" aria-label="Юридическая информация">
+					<a href="https://arcode-dev.ru/legal.html" target="_blank" rel="noopener noreferrer">
+						Правовая информация
 					</a>
-					<span class="footer__logo-text">Aura A-Frame</span>
-				</div>
-				<p class="footer__note">© 2026 Concept Design & Development — ArCode</p>
+					<a
+						href="https://arcode-dev.ru/privacy.html"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Политика конфиденциальности"
+					>
+						Политика ПД
+					</a>
+					<a
+						href="https://arcode-dev.ru/consent.html"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Согласие на обработку персональных данных"
+					>
+						Согласие ПД
+					</a>
+				</nav>
+				<p class="footer__demo">
+					Демонстрационный проект — данные из формы бронирования не
+					отправляются.
+				</p>
+				<p class="footer__note">
+					© 2026 Concept Design &amp; Development —
+					<a href="https://arcode-dev.ru/" target="_blank" rel="noopener noreferrer">ArCode</a>
+				</p>
 			</div>
 		</footer>
 
@@ -1032,16 +1054,19 @@
 				</button>
 
 				<div class="booking-request__intro">
-					<span class="eyebrow">Бронирование</span>
+					<span class="eyebrow">Демо-бронирование</span>
 					<h2 class="booking-request__title" id="booking-request-title">
 						Оставьте контакты.
 					</h2>
 					<p class="booking-request__text">
-						Мы подтвердим свободные даты и подготовим все к вашему приезду.
+						Заполните поля, чтобы посмотреть демонстрационный сценарий формы.
 					</p>
 				</div>
 
-				<form class="booking-request__form">
+				<form
+					class="booking-request__form"
+					aria-describedby="booking-request-demo-note"
+				>
 					<label class="field">
 						<span class="field__label">Имя</span>
 						<input
@@ -1071,11 +1096,15 @@
 							rows="4"
 						></textarea>
 					</label>
+					<p class="booking-request__demo-note" id="booking-request-demo-note">
+						<strong>Демо-режим.</strong> Введённые данные никуда не отправляются
+						и не сохраняются.
+					</p>
 					<button
 						class="button button--light booking-request__action"
 						type="submit"
 					>
-						Подтвердить бронирование
+						Проверить демо-форму
 					</button>
 				</form>
 			</div>
