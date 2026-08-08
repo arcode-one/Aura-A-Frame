@@ -2,17 +2,26 @@ export function initBookingRequest() {
 	const modal = document.querySelector(".booking-request");
 	const dialog = modal?.querySelector(".booking-request__panel");
 	const form = modal?.querySelector(".booking-request__form");
+	const intro = modal?.querySelector(".booking-request__intro");
+	const success = modal?.querySelector(".booking-request__success");
+	const successTitle = modal?.querySelector(".booking-request__success-title");
+	const successName = modal?.querySelector("[data-booking-success-name]");
 	const bookingForm = document.querySelector(".booking__form");
 	const checkinInput = bookingForm?.querySelector('[data-date-input="checkin"]');
 	const checkoutInput = bookingForm?.querySelector('[data-date-input="checkout"]');
 	const submit = form?.querySelector('button[type="submit"]');
 	const openers = document.querySelectorAll("[data-open-booking-modal]");
 	const closers = modal?.querySelectorAll("[data-close-booking-modal]");
+	let closeTimer = null;
 
 	if (
 		!modal ||
 		!dialog ||
 		!form ||
+		!intro ||
+		!success ||
+		!successTitle ||
+		!successName ||
 		!submit ||
 		!openers.length ||
 		!bookingForm ||
@@ -48,7 +57,25 @@ export function initBookingRequest() {
 		return true;
 	}
 
+	function resetModal() {
+		dialog.classList.remove("is-success");
+		dialog.setAttribute("aria-labelledby", "booking-request-title");
+		intro.hidden = false;
+		form.hidden = false;
+		success.hidden = true;
+		successName.textContent = "";
+	}
+
+	function clearCloseTimer() {
+		if (closeTimer !== null) {
+			window.clearTimeout(closeTimer);
+			closeTimer = null;
+		}
+	}
+
 	function openModal() {
+		clearCloseTimer();
+		resetModal();
 		modal.hidden = false;
 		document.body.classList.add("modal-open");
 
@@ -59,8 +86,11 @@ export function initBookingRequest() {
 	}
 
 	function closeModal() {
+		clearCloseTimer();
 		modal.hidden = true;
 		document.body.classList.remove("modal-open");
+		form.reset();
+		resetModal();
 	}
 
 	openers.forEach((opener) => {
@@ -90,13 +120,16 @@ export function initBookingRequest() {
 			return;
 		}
 
-		const oldText = submit.textContent;
-		submit.textContent = "Демо: данные не отправлены";
+		const name = new FormData(form).get("name")?.toString().trim();
 
-		setTimeout(() => {
-			submit.textContent = oldText;
-			form.reset();
-			closeModal();
-		}, 2200);
+		successName.textContent = name ? `, ${name}` : "";
+		intro.hidden = true;
+		form.hidden = true;
+		success.hidden = false;
+		dialog.classList.add("is-success");
+		dialog.setAttribute("aria-labelledby", "booking-request-success-title");
+		successTitle.focus();
+		form.reset();
+		closeTimer = window.setTimeout(closeModal, 6000);
 	});
 }

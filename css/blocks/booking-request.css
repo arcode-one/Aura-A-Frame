@@ -6,8 +6,11 @@
 	position: fixed;
 	inset: 0;
 	z-index: 120;
-	display: grid;
-	place-items: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow-y: auto;
+	overscroll-behavior: contain;
 	padding: 24px;
 }
 
@@ -22,6 +25,7 @@
 	position: relative;
 	z-index: 1;
 	width: min(100%, 560px);
+	margin: auto 0;
 	padding: clamp(24px, 4vw, 34px);
 	border: 1px solid rgba(255, 255, 255, 0.12);
 	border-radius: 30px;
@@ -100,6 +104,11 @@
 	gap: 14px;
 }
 
+.booking-request__intro[hidden],
+.booking-request__form[hidden] {
+	display: none;
+}
+
 .booking-request__comment {
 	grid-column: 1 / -1;
 }
@@ -131,6 +140,90 @@
 .booking-request__action {
 	width: 100%;
 	margin-top: 4px;
+}
+
+.booking-request__success {
+	display: grid;
+	justify-items: center;
+	padding: clamp(36px, 7vw, 64px) 0 10px;
+	text-align: center;
+	animation: booking-request-success-in 0.65s var(--ease) both;
+}
+
+.booking-request__success[hidden] {
+	display: none;
+}
+
+.booking-request__success-icon {
+	position: relative;
+	width: 78px;
+	height: 78px;
+	margin-bottom: 26px;
+	border: 1px solid rgba(233, 161, 79, 0.4);
+	border-radius: 50%;
+	background:
+		radial-gradient(circle, rgba(233, 161, 79, 0.18), transparent 68%),
+		rgba(233, 161, 79, 0.07);
+	box-shadow:
+		0 0 0 10px rgba(233, 161, 79, 0.035),
+		0 20px 60px rgba(233, 161, 79, 0.14);
+}
+
+.booking-request__success-icon::before {
+	content: "";
+	position: absolute;
+	top: 37%;
+	left: 31%;
+	width: 28px;
+	height: 14px;
+	border-bottom: 3px solid var(--amber);
+	border-left: 3px solid var(--amber);
+	transform: rotate(-45deg);
+}
+
+.booking-request__success-title {
+	margin: 14px 0;
+	font-size: clamp(32px, 5vw, 46px);
+	line-height: 1;
+	letter-spacing: -0.05em;
+}
+
+.booking-request__success-title:focus {
+	outline: none;
+}
+
+.booking-request__success-text {
+	max-width: 430px;
+	color: rgba(246, 241, 232, 0.7);
+	line-height: 1.65;
+}
+
+.booking-request__success-timer {
+	margin-top: 10px;
+	color: rgba(246, 241, 232, 0.46);
+	font-size: 13px;
+}
+
+.booking-request__success .booking-request__demo-note {
+	width: 100%;
+	margin-top: 24px;
+}
+
+.booking-request__success-action {
+	width: 100%;
+	margin-top: 16px;
+}
+
+@keyframes booking-request-success-in {
+	from {
+		opacity: 0;
+		transform: translateY(16px) scale(0.98);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0) scale(1);
+	}
 }
 
 body.modal-open {
@@ -232,5 +325,11 @@ body.modal-open {
 
 	.booking-request__title {
 		font-size: 25px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.booking-request__success {
+		animation-duration: 0.01ms;
 	}
 }
