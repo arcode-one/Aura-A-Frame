@@ -6,6 +6,7 @@ export function initBookingRequest() {
 	const success = modal?.querySelector(".booking-request__success");
 	const successTitle = modal?.querySelector(".booking-request__success-title");
 	const successName = modal?.querySelector("[data-booking-success-name]");
+	const successTimer = modal?.querySelector(".booking-request__success-timer");
 	const bookingForm = document.querySelector(".booking__form");
 	const checkinInput = bookingForm?.querySelector('[data-date-input="checkin"]');
 	const checkoutInput = bookingForm?.querySelector('[data-date-input="checkout"]');
@@ -13,6 +14,7 @@ export function initBookingRequest() {
 	const openers = document.querySelectorAll("[data-open-booking-modal]");
 	const closers = modal?.querySelectorAll("[data-close-booking-modal]");
 	let closeTimer = null;
+	let countdownTimer = null;
 
 	if (
 		!modal ||
@@ -22,6 +24,7 @@ export function initBookingRequest() {
 		!success ||
 		!successTitle ||
 		!successName ||
+		!successTimer ||
 		!submit ||
 		!openers.length ||
 		!bookingForm ||
@@ -64,12 +67,23 @@ export function initBookingRequest() {
 		form.hidden = false;
 		success.hidden = true;
 		successName.textContent = "";
+		updateSuccessTimer(6);
+	}
+
+	function updateSuccessTimer(seconds) {
+		const word = seconds === 1 ? "секунду" : seconds < 5 ? "секунды" : "секунд";
+		successTimer.textContent = `Окно закроется автоматически через ${seconds} ${word}.`;
 	}
 
 	function clearCloseTimer() {
 		if (closeTimer !== null) {
 			window.clearTimeout(closeTimer);
 			closeTimer = null;
+		}
+
+		if (countdownTimer !== null) {
+			window.clearInterval(countdownTimer);
+			countdownTimer = null;
 		}
 	}
 
@@ -130,6 +144,17 @@ export function initBookingRequest() {
 		dialog.setAttribute("aria-labelledby", "booking-request-success-title");
 		successTitle.focus();
 		form.reset();
+
+		let secondsRemaining = 6;
+		updateSuccessTimer(secondsRemaining);
+		countdownTimer = window.setInterval(() => {
+			secondsRemaining -= 1;
+
+			if (secondsRemaining > 0) {
+				updateSuccessTimer(secondsRemaining);
+			}
+		}, 1000);
+
 		closeTimer = window.setTimeout(closeModal, 6000);
 	});
 }
