@@ -59,9 +59,9 @@
 
 .hero__content {
 	position: absolute;
-	left: 34px;
-	right: 34px;
-	bottom: clamp(18px, 4vw, 46px);
+	left: 52px;
+	right: 52px;
+	bottom: 48px;
 	display: grid;
 	grid-template-columns: minmax(320px, 760px);
 	gap: 0;
@@ -71,13 +71,13 @@
 .hero__lead {
 	position: relative;
 	max-width: 760px;
-	padding: 10px 0 18px;
+	padding: 10px 0 0;
 }
 
 .hero__title {
 	max-width: 700px;
-	font-size: clamp(60px, 8.5vw, 132px);
-	line-height: 0.88;
+	font-size: clamp(60px, 5.5vw, 84px);
+	line-height: 0.94;
 	letter-spacing: -0.065em;
 	font-weight: 700;
 	margin-bottom: 24px;
@@ -89,6 +89,7 @@
 
 .hero__title span {
 	display: block;
+	white-space: nowrap;
 }
 
 .hero__text {
@@ -150,7 +151,7 @@
 	gap: 10px;
 	width: fit-content;
 	max-width: 100%;
-	margin-bottom: 26px;
+	margin-bottom: 0;
 	padding: 0;
 	list-style: none;
 }
@@ -175,9 +176,13 @@
 }
 
 .hero__meta {
+	position: absolute;
+	right: 0;
+	bottom: 0;
 	display: inline-flex;
 	align-items: center;
 	gap: 10px;
+	white-space: nowrap;
 	color: rgba(255, 243, 226, 0.9);
 	font-size: 16px;
 	line-height: 1.3;
@@ -285,15 +290,15 @@
 	}
 
 	.hero__content {
-		left: 28px;
-		right: 28px;
-		bottom: clamp(18px, 3vw, 38px);
+		left: 45px;
+		right: 45px;
+		bottom: 41px;
 		grid-template-columns: minmax(320px, 680px);
 	}
 
 	.hero__title {
 		max-width: 640px;
-		font-size: clamp(56px, 7vw, 118px);
+		font-size: clamp(56px, 5.3vw, 76px);
 	}
 
 	.hero__text {
@@ -328,15 +333,15 @@
 	}
 
 	.hero__content {
-		left: 24px;
-		right: 24px;
-		bottom: 22px;
+		left: 41px;
+		right: 41px;
+		bottom: 37px;
 		grid-template-columns: minmax(320px, 520px);
 	}
 
 	.hero__title {
 		max-width: 500px;
-		font-size: clamp(50px, 8vw, 82px);
+		font-size: clamp(48px, 5vw, 60px);
 	}
 
 	.hero__text {
@@ -385,14 +390,15 @@
 	}
 
 	.hero__content {
-		left: 20px;
-		right: 20px;
+		left: 37px;
+		right: 37px;
+		bottom: 33px;
 		grid-template-columns: minmax(280px, 500px);
 	}
 
 	.hero__title {
 		max-width: 480px;
-		font-size: clamp(48px, 8vw, 74px);
+		font-size: clamp(46px, 5.5vw, 56px);
 	}
 
 	.hero__text {
@@ -433,14 +439,15 @@
 	}
 
 	.hero__content {
-		left: 19px;
-		right: 19px;
+		left: 34px;
+		right: 34px;
+		bottom: 31px;
 		grid-template-columns: minmax(280px, 470px);
 	}
 
 	.hero__title {
 		max-width: 460px;
-		font-size: clamp(46px, 7.8vw, 70px);
+		font-size: clamp(44px, 5.5vw, 54px);
 	}
 }
 
@@ -480,15 +487,15 @@
 	}
 
 	.hero__content {
-		left: 18px;
-		right: 18px;
-		bottom: 20px;
+		left: 30px;
+		right: 30px;
+		bottom: 28px;
 		grid-template-columns: minmax(0, 1fr);
 	}
 
 	.hero__title {
 		max-width: 460px;
-		font-size: clamp(48px, 11vw, 76px);
+		font-size: clamp(42px, 6.4vw, 52px);
 		margin-bottom: 18px;
 	}
 
@@ -510,7 +517,6 @@
 
 	.hero__features {
 		gap: 18px 14px;
-		margin-bottom: 20px;
 	}
 
 	.hero__feature svg {
@@ -563,15 +569,15 @@
 	}
 
 	.hero__content {
-		left: 18px;
-		right: 18px;
-		bottom: 20px;
+		left: 30px;
+		right: 30px;
+		bottom: 28px;
 		grid-template-columns: minmax(0, 1fr);
 	}
 
 	.hero__title {
 		max-width: 440px;
-		font-size: clamp(48px, 13vw, 72px);
+		font-size: clamp(40px, 6.5vw, 50px);
 		margin-bottom: 16px;
 	}
 
@@ -588,7 +594,7 @@
 	}
 
 	.hero__lead {
-		padding: 8px 0 12px;
+		padding: 8px 0 0;
 	}
 
 	.hero__buttons {
@@ -597,7 +603,6 @@
 
 	.hero__features {
 		gap: 18px 14px;
-		margin-bottom: 20px;
 	}
 
 	.hero__feature {
@@ -655,15 +660,15 @@
 	}
 
 	.hero__content {
-		left: 14px;
-		right: 14px;
-		bottom: 18px;
+		left: 24px;
+		right: 24px;
+		bottom: 23px;
 	}
 
 	.hero__title {
 		max-width: 320px;
-		font-size: clamp(42px, 15vw, 58px);
-		line-height: 0.92;
+		font-size: clamp(36px, 6vw, 39px);
+		line-height: 0.96;
 	}
 
 	.hero__text {
@@ -726,13 +731,14 @@
 	}
 
 	.hero__content {
-		left: 13px;
-		right: 13px;
+		left: 22px;
+		right: 22px;
+		bottom: 22px;
 	}
 
 	.hero__title {
 		max-width: 300px;
-		font-size: clamp(41px, 14.4vw, 56px);
+		font-size: clamp(34px, 6.2vw, 36px);
 	}
 
 	.hero__text {
@@ -782,14 +788,14 @@
 	}
 
 	.hero__content {
-		left: 12px;
-		right: 12px;
-		bottom: 16px;
+		left: 21px;
+		right: 21px;
+		bottom: 20px;
 	}
 
 	.hero__title {
 		max-width: 280px;
-		font-size: clamp(40px, 13vw, 52px);
+		font-size: 34px;
 	}
 
 	.hero__text {
@@ -848,7 +854,7 @@
 	}
 
 	.hero__title {
-		font-size: clamp(38px, 14vw, 52px);
+		font-size: 32px;
 	}
 
 	.hero__text {
@@ -867,10 +873,19 @@
 	.hero__features {
 		grid-template-columns: repeat(2, minmax(88px, max-content));
 		gap: 12px 12px;
+		padding-bottom: 0;
 	}
 
 	.hero__feature {
 		font-size: 12px;
+	}
+
+	.hero__meta {
+		position: static;
+		right: auto;
+		bottom: auto;
+		justify-self: start;
+		margin-top: 18px;
 	}
 }
 
@@ -897,14 +912,14 @@
 	}
 
 	.hero__content {
-		left: 12px;
-		right: 12px;
-		bottom: 14px;
+		left: 20px;
+		right: 20px;
+		bottom: 20px;
 	}
 
 	.hero__title {
 		max-width: 250px;
-		font-size: 34px;
+		font-size: 30px;
 	}
 
 	.hero__text {
