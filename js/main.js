@@ -1,6 +1,8 @@
 import { initBookingForm } from "./modules/booking-form.js";
 import { initBookingRequest } from "./modules/booking-request.js";
 import { initBurgerMenu } from "./modules/burger-menu.js";
+import { initCabinModal } from "./modules/cabin-modal.js";
+import { initCustomSelects } from "./modules/custom-select.js";
 import { initFaq } from "./modules/faq.js";
 import { initHeaderScroll } from "./modules/header-scroll.js";
 import { initParallax } from "./modules/parallax.js";
@@ -12,11 +14,13 @@ import { initTelegramLinks } from "./modules/telegram-link.js";
 function initApp() {
 	initBurgerMenu();
 	initHeaderScroll();
+	initCabinModal();
 	initQuickRequest();
 	initReveal();
 	initParallax();
 	initFaq();
 	initBookingForm();
+	initCustomSelects();
 	initBookingRequest();
 	initReviewsSlider();
 	initTelegramLinks();

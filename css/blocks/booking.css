@@ -94,6 +94,21 @@
 	background-position: center;
 	background-size: 18px 18px;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='rgba(246,241,232,0.72)' stroke-width='1.7' stroke-linecap='round'%3E%3Crect x='4.5' y='6.1' width='15' height='13.4' rx='2.2'/%3E%3Cpath d='M8.2 4.8v3M15.8 4.8v3M4.9 9.8h14.2'/%3E%3C/svg%3E");
+	transition:
+		opacity 0.35s var(--ease),
+		transform 0.35s var(--ease);
+}
+
+.field--date:hover .field__control--date {
+	border-color: rgba(233, 161, 79, 0.58);
+	background: rgba(8, 9, 9, 0.5);
+	box-shadow: 0 0 0 4px rgba(233, 161, 79, 0.08);
+}
+
+.field--date:hover::after,
+.field--date:focus-within::after {
+	opacity: 1;
+	transform: translateY(-1px);
 }
 
 .field__control:focus {
@@ -102,8 +117,164 @@
 	background: rgba(8, 9, 9, 0.48);
 }
 
-.field select option {
-	color: #111;
+.custom-select {
+	position: relative;
+}
+
+.custom-select__native {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	clip-path: inset(50%);
+	white-space: nowrap;
+	border: 0;
+}
+
+.custom-select__trigger {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 16px;
+	padding-right: 20px;
+	text-align: left;
+	cursor: pointer;
+}
+
+.custom-select__trigger:hover,
+.custom-select.is-open .custom-select__trigger {
+	border-color: rgba(233, 161, 79, 0.58);
+	background: rgba(8, 9, 9, 0.5);
+	box-shadow: 0 0 0 4px rgba(233, 161, 79, 0.08);
+}
+
+.custom-select__value {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.custom-select__arrow {
+	flex: 0 0 auto;
+	width: 9px;
+	height: 9px;
+	margin-top: -4px;
+	border-right: 1.8px solid currentColor;
+	border-bottom: 1.8px solid currentColor;
+	opacity: 0.78;
+	transform: rotate(45deg);
+	transform-origin: center;
+	transition:
+		transform 0.38s var(--ease),
+		opacity 0.38s var(--ease);
+}
+
+.custom-select__trigger:hover .custom-select__arrow,
+.custom-select.is-open .custom-select__arrow {
+	opacity: 1;
+}
+
+.custom-select.is-open .custom-select__arrow {
+	transform: rotate(225deg);
+}
+
+.custom-select__dropdown {
+	position: absolute;
+	top: calc(100% + 8px);
+	left: 0;
+	z-index: 20;
+	width: 100%;
+	max-height: 300px;
+	padding: 8px;
+	overflow-y: auto;
+	border: 1px solid rgba(233, 161, 79, 0.34);
+	border-radius: 18px;
+	background: #0d0e0d;
+	box-shadow:
+		0 22px 60px rgba(0, 0, 0, 0.48),
+		inset 0 1px 0 rgba(255, 255, 255, 0.06);
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-7px) scale(0.985);
+	transform-origin: top center;
+	pointer-events: none;
+	transition:
+		opacity 0.24s var(--ease),
+		visibility 0.24s var(--ease),
+		transform 0.32s var(--ease);
+}
+
+.custom-select.is-open .custom-select__dropdown {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0) scale(1);
+	pointer-events: auto;
+}
+
+.custom-select__option {
+	position: relative;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	min-height: 42px;
+	padding: 10px 38px 10px 12px;
+	border: 0;
+	border-radius: 12px;
+	color: rgba(246, 241, 232, 0.72);
+	background: transparent;
+	text-align: left;
+	cursor: pointer;
+	transition:
+		color 0.25s var(--ease),
+		background 0.25s var(--ease),
+		transform 0.25s var(--ease);
+}
+
+.custom-select__option::after {
+	content: "";
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	width: 6px;
+	height: 11px;
+	border-right: 1.8px solid var(--amber);
+	border-bottom: 1.8px solid var(--amber);
+	opacity: 0;
+	transform: translateY(-62%) rotate(45deg) scale(0.7);
+	transition:
+		opacity 0.25s var(--ease),
+		transform 0.25s var(--ease);
+}
+
+.custom-select__option:hover,
+.custom-select__option:focus-visible {
+	color: var(--white);
+	background: rgba(233, 161, 79, 0.11);
+	outline: none;
+	transform: translateX(2px);
+}
+
+.custom-select__option[aria-selected="true"] {
+	color: var(--white);
+	background: rgba(233, 161, 79, 0.17);
+}
+
+.custom-select__option[aria-selected="true"]::after {
+	opacity: 1;
+	transform: translateY(-62%) rotate(45deg) scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.custom-select__trigger,
+	.custom-select__arrow,
+	.custom-select__dropdown,
+	.custom-select__option,
+	.custom-select__option::after {
+		transition-duration: 0.01ms;
+	}
 }
 
 .booking__button {

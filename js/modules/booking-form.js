@@ -137,8 +137,8 @@ export function initBookingForm() {
 	const checkoutInput = form.querySelector('[data-date-input="checkout"]');
 	const checkinField = checkinInput?.closest(".field--date");
 	const checkoutField = checkoutInput?.closest(".field--date");
-	const guestSelect = form.querySelector('select[required]:nth-of-type(1)');
-	const cabinSelect = form.querySelector('select[required]:nth-of-type(2)');
+	const guestSelect = form.querySelector("#booking-guests");
+	const cabinSelect = form.querySelector("#booking-cabin");
 	const button = form.querySelector("button");
 
 	if (!checkinInput || !checkoutInput || !button || !checkinField || !checkoutField) {

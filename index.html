@@ -26,12 +26,12 @@
 	</head>
 	<body class="page">
 		<header class="header container">
-			<div class="header__logo">
-				<a class="header__logo-link" href="#top" aria-label="Aura A-Frame">
-					<img src="icons/logo-aura.svg" alt="Aura A-Frame logo" />
-				</a>
+			<a class="header__logo" href="#top" aria-label="Aura A-Frame — наверх">
+				<span class="header__logo-link" aria-hidden="true">
+					<img src="icons/logo-aura.svg" alt="" />
+				</span>
 				<span class="header__logo-text">Aura A-Frame</span>
-			</div>
+			</a>
 
 			<nav class="nav" id="header-nav" aria-label="Основная навигация">
 				<a class="nav__link" href="#cabins">Домики</a>
@@ -57,11 +57,11 @@
 							<use href="icons/sprite.svg#icon-telegram"></use>
 						</svg>
 					</a>
-					<a class="header__phone" href="tel:+79997079977">
+					<a class="header__phone" href="tel:+79223243365">
 						<svg aria-hidden="true">
 							<use href="icons/sprite.svg#icon-phone"></use>
 						</svg>
-						<span>+7 (999) 707-99-77</span>
+						<span>+7 (922) 324-33-65</span>
 					</a>
 				</div>
 				<button
@@ -162,13 +162,24 @@
 				</header>
 
 				<div class="stays__grid">
-					<article class="stay-card reveal">
+					<button
+						class="stay-card stay-card--interactive reveal"
+						type="button"
+						aria-haspopup="dialog"
+						aria-controls="cabin-modal"
+						aria-label="Подробнее о домике A-01"
+						data-open-cabin-modal="A-01"
+					>
 						<figure class="stay-card__image">
 							<img
 								loading="lazy"
 								src="images/A-01.webp"
-								alt="A-frame домик Pine"
+								alt="A-frame домик A-01"
 							/>
+							<span class="stay-card__action" aria-hidden="true">
+								<span>Смотреть домик</span>
+								<i></i>
+							</span>
 						</figure>
 						<div class="stay-card__content">
 							<div class="stay-card__info">
@@ -179,15 +190,26 @@
 							</div>
 							<div class="stay-card__price">от 19 800 ₽ / сутки</div>
 						</div>
-					</article>
+					</button>
 
-					<article class="stay-card reveal">
+					<button
+						class="stay-card stay-card--interactive reveal"
+						type="button"
+						aria-haspopup="dialog"
+						aria-controls="cabin-modal"
+						aria-label="Подробнее о домике A-02"
+						data-open-cabin-modal="A-02"
+					>
 						<figure class="stay-card__image">
 							<img
 								loading="lazy"
 								src="images/A-02.webp"
 								alt="A-frame домик Aurora"
 							/>
+							<span class="stay-card__action" aria-hidden="true">
+								<span>Смотреть домик</span>
+								<i></i>
+							</span>
 						</figure>
 						<div class="stay-card__content">
 							<div class="stay-card__info">
@@ -198,15 +220,26 @@
 							</div>
 							<div class="stay-card__price">от 22 700 ₽ / сутки</div>
 						</div>
-					</article>
+					</button>
 
-					<article class="stay-card reveal">
+					<button
+						class="stay-card stay-card--interactive reveal"
+						type="button"
+						aria-haspopup="dialog"
+						aria-controls="cabin-modal"
+						aria-label="Подробнее о домике A-03"
+						data-open-cabin-modal="A-03"
+					>
 						<figure class="stay-card__image">
 							<img
 								loading="lazy"
 								src="images/A-03.webp"
 								alt="A-frame домик Ember"
 							/>
+							<span class="stay-card__action" aria-hidden="true">
+								<span>Смотреть домик</span>
+								<i></i>
+							</span>
 						</figure>
 						<div class="stay-card__content">
 							<div class="stay-card__info">
@@ -217,15 +250,26 @@
 							</div>
 							<div class="stay-card__price">от 24 900 ₽ / сутки</div>
 						</div>
-					</article>
+					</button>
 
-					<article class="stay-card reveal">
+					<button
+						class="stay-card stay-card--interactive reveal"
+						type="button"
+						aria-haspopup="dialog"
+						aria-controls="cabin-modal"
+						aria-label="Подробнее о домике A-04"
+						data-open-cabin-modal="A-04"
+					>
 						<figure class="stay-card__image">
 							<img
 								loading="lazy"
 								src="images/A-05.webp"
 								alt="A-frame домик A-04"
 							/>
+							<span class="stay-card__action" aria-hidden="true">
+								<span>Смотреть домик</span>
+								<i></i>
+							</span>
 						</figure>
 						<div class="stay-card__content">
 							<div class="stay-card__info">
@@ -236,15 +280,26 @@
 							</div>
 							<div class="stay-card__price">от 26 600 ₽ / сутки</div>
 						</div>
-					</article>
+					</button>
 
-					<article class="stay-card reveal">
+					<button
+						class="stay-card stay-card--interactive reveal"
+						type="button"
+						aria-haspopup="dialog"
+						aria-controls="cabin-modal"
+						aria-label="Подробнее о домике A-05"
+						data-open-cabin-modal="A-05"
+					>
 						<figure class="stay-card__image">
 							<img
 								loading="lazy"
 								src="images/A-04.webp"
 								alt="A-frame домик A-05"
 							/>
+							<span class="stay-card__action" aria-hidden="true">
+								<span>Смотреть домик</span>
+								<i></i>
+							</span>
 						</figure>
 						<div class="stay-card__content">
 							<div class="stay-card__info">
@@ -255,7 +310,7 @@
 							</div>
 							<div class="stay-card__price">от 29 400 ₽ / сутки</div>
 						</div>
-					</article>
+					</button>
 				</div>
 			</section>
 
@@ -860,9 +915,9 @@
 									<p>
 										В стоимость уже входит проживание в выбранном домике,
 										постельное бельё, полотенца, базовая посуда и всё для
-										комфортного отдыха. Мангальная зона и территория доступны для
-										спокойных вечеров, а дополнительные опции вроде бани, чана или
-										специальных сценариев уточняются отдельно.
+										комфортного отдыха. Мангальная зона и территория доступны
+										для спокойных вечеров, а дополнительные опции вроде бани,
+										чана или специальных сценариев уточняются отдельно.
 									</p>
 								</div>
 							</div>
@@ -876,10 +931,10 @@
 								<div class="faq__answer-inner">
 									<p>
 										Это зависит от выбранного домика и формата бронирования.
-										Мангальная зона доступна на территории, а баня, чан и бассейн
-										в некоторых вариантах уже включены, в других подключаются как
-										дополнительные опции. Всё уточняем заранее перед
-										подтверждением.
+										Мангальная зона доступна на территории, а баня, чан и
+										бассейн в некоторых вариантах уже включены, в других
+										подключаются как дополнительные опции. Всё уточняем заранее
+										перед подтверждением.
 									</p>
 								</div>
 							</div>
@@ -892,9 +947,9 @@
 							<div class="faq__answer">
 								<div class="faq__answer-inner">
 									<p>
-										У нас есть варианты для отдыха от 1 до 8 гостей. Можно выбрать
-										компактный формат для двоих или просторный домик для семьи и
-										компании.
+										У нас есть варианты для отдыха от 1 до 8 гостей. Можно
+										выбрать компактный формат для двоих или просторный домик для
+										семьи и компании.
 									</p>
 								</div>
 							</div>
@@ -909,8 +964,8 @@
 									<p>
 										Вы оставляете заявку, мы подтверждаем свободные даты,
 										выбранный домик и детали отдыха. После этого отправляем всю
-										информацию по заезду, чтобы вы приехали спокойно и без лишних
-										звонков.
+										информацию по заезду, чтобы вы приехали спокойно и без
+										лишних звонков.
 									</p>
 								</div>
 							</div>
@@ -960,29 +1015,41 @@
 									required
 								/>
 							</label>
-							<label class="field">
-								<span class="field__label">Гостей</span>
-								<select class="field__control" required>
-									<option>1 гость</option>
-									<option>2 гостя</option>
-									<option>3 гостя</option>
-									<option>4 гостя</option>
-									<option>5 гостей</option>
-									<option>6 гостей</option>
-									<option>7 гостей</option>
-									<option>8 гостей</option>
+							<div class="field">
+								<label class="field__label" for="booking-guests">Гостей</label>
+								<select
+									class="field__control"
+									id="booking-guests"
+									name="guests"
+									data-custom-select
+									required
+								>
+									<option value="1">1 гость</option>
+									<option value="2">2 гостя</option>
+									<option value="3">3 гостя</option>
+									<option value="4">4 гостя</option>
+									<option value="5">5 гостей</option>
+									<option value="6">6 гостей</option>
+									<option value="7">7 гостей</option>
+									<option value="8">8 гостей</option>
 								</select>
-							</label>
-							<label class="field">
-								<span class="field__label">Домик</span>
-								<select class="field__control" required>
-									<option>A-01</option>
-									<option>A-02</option>
-									<option>A-03</option>
-									<option>A-04</option>
-									<option>A-05</option>
+							</div>
+							<div class="field">
+								<label class="field__label" for="booking-cabin">Домик</label>
+								<select
+									class="field__control"
+									id="booking-cabin"
+									name="cabin"
+									data-custom-select
+									required
+								>
+									<option value="A-01">A-01</option>
+									<option value="A-02">A-02</option>
+									<option value="A-03">A-03</option>
+									<option value="A-04">A-04</option>
+									<option value="A-05">A-05</option>
 								</select>
-							</label>
+							</div>
 						</div>
 						<div class="booking__actions">
 							<button
@@ -1012,33 +1079,190 @@
 				>
 					<span>Хочу такой же сайт</span>
 				</a>
-				<nav class="footer__legal" aria-label="Юридическая информация">
-					<a href="https://arcode-dev.ru/legal.html" target="_blank" rel="noopener noreferrer">
-						Правовая информация
-					</a>
-					<a
-						href="https://arcode-dev.ru/privacy.html"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Политика конфиденциальности"
-					>
-						Политика ПД
-					</a>
-					<a
-						href="https://arcode-dev.ru/consent.html"
-						target="_blank"
-						rel="noopener noreferrer"
-						aria-label="Согласие на обработку персональных данных"
-					>
-						Согласие ПД
-					</a>
-				</nav>
 				<p class="footer__note">
 					© 2026 Concept Design &amp; Development —
-					<a href="https://arcode-dev.ru/" target="_blank" rel="noopener noreferrer">ArCode</a>
+					<a
+						href="https://arcode-dev.ru/"
+						target="_blank"
+						rel="noopener noreferrer"
+						>ArCode</a
+					>
 				</p>
 			</div>
 		</footer>
+
+		<div class="cabin-modal" id="cabin-modal" data-cabin-modal hidden>
+			<div class="cabin-modal__overlay" data-close-cabin-modal></div>
+			<section
+				class="cabin-modal__panel"
+				role="dialog"
+				aria-modal="true"
+				aria-labelledby="cabin-modal-title"
+			>
+				<button
+					class="cabin-modal__close"
+					type="button"
+					aria-label="Закрыть описание домика"
+					data-close-cabin-modal
+				>
+					<span class="cabin-modal__close-icon" aria-hidden="true"></span>
+				</button>
+
+				<div class="cabin-modal__layout">
+					<div class="cabin-modal__gallery">
+						<figure class="cabin-modal__main-image">
+							<img
+								src="images/A-01-interior-living.webp"
+								alt="Гостиная с кухней внутри домика A-01"
+								draggable="false"
+								data-cabin-gallery-main
+							/>
+						</figure>
+						<div
+							class="cabin-modal__thumbs"
+							role="group"
+							aria-label="Фотографии домика A-01"
+							data-cabin-gallery-label
+						>
+							<button
+								class="cabin-modal__thumb is-active"
+								type="button"
+								aria-label="Показать гостиную"
+								aria-pressed="true"
+								data-cabin-gallery-image="images/A-01-interior-living.webp"
+								data-cabin-gallery-alt="Гостиная с кухней внутри домика A-01"
+							>
+								<img src="images/A-01-interior-living.webp" alt="" />
+							</button>
+							<button
+								class="cabin-modal__thumb"
+								type="button"
+								aria-label="Показать отдых для двоих"
+								aria-pressed="false"
+								data-cabin-gallery-image="images/A-01-couple-fire.webp"
+								data-cabin-gallery-alt="Пара отдыхает у огня на террасе домика A-01"
+							>
+								<img src="images/A-01-couple-fire.webp" alt="" loading="lazy" />
+							</button>
+							<button
+								class="cabin-modal__thumb"
+								type="button"
+								aria-label="Показать баню и душевую"
+								aria-pressed="false"
+								data-cabin-gallery-image="images/A-01-interior-sauna.webp"
+								data-cabin-gallery-alt="Приватная баня и душевая домика A-01"
+							>
+								<img
+									src="images/A-01-interior-sauna.webp"
+									alt=""
+									loading="lazy"
+								/>
+							</button>
+						</div>
+						<nav
+							class="cabin-modal__cabin-nav"
+							aria-label="Переключение домиков"
+						>
+							<button
+								class="cabin-modal__cabin-switch cabin-modal__cabin-switch--prev"
+								type="button"
+								aria-label="Предыдущий домик A-05"
+								aria-controls="cabin-modal-title"
+								data-cabin-prev
+							>
+								<span class="cabin-modal__cabin-arrow-wrap" aria-hidden="true">
+									<span class="cabin-modal__cabin-arrow"></span>
+								</span>
+								<span class="cabin-modal__cabin-copy">
+									<span class="cabin-modal__cabin-direction">Назад</span>
+									<strong data-cabin-prev-label>A-05</strong>
+								</span>
+							</button>
+							<span
+								class="cabin-modal__cabin-position"
+								aria-live="polite"
+								aria-atomic="true"
+								aria-label="Домик 1 из 5"
+								data-cabin-position
+							>
+								<strong data-cabin-position-current>01</strong>
+								<i aria-hidden="true"></i>
+								<span data-cabin-position-total>05</span>
+							</span>
+							<button
+								class="cabin-modal__cabin-switch cabin-modal__cabin-switch--next"
+								type="button"
+								aria-label="Следующий домик A-02"
+								aria-controls="cabin-modal-title"
+								data-cabin-next
+							>
+								<span class="cabin-modal__cabin-copy">
+									<span class="cabin-modal__cabin-direction">Далее</span>
+									<strong data-cabin-next-label>A-02</strong>
+								</span>
+								<span class="cabin-modal__cabin-arrow-wrap" aria-hidden="true">
+									<span class="cabin-modal__cabin-arrow"></span>
+								</span>
+							</button>
+						</nav>
+					</div>
+
+					<div class="cabin-modal__content">
+						<span class="eyebrow" data-cabin-eyebrow>Домик A-01</span>
+						<h2
+							class="cabin-modal__title"
+							id="cabin-modal-title"
+							data-cabin-title
+						>
+							Тишина на двоих.
+						</h2>
+						<p class="cabin-modal__lead" data-cabin-lead>
+							Уютный A-frame для пары: панорамная гостиная, спальня под самой
+							крышей, приватная баня и терраса, с которой приятно начинать
+							медленное утро среди сосен.
+						</p>
+
+						<ul
+							class="cabin-modal__facts"
+							aria-label="Основные характеристики"
+							data-cabin-facts
+						>
+							<li>до 2 гостей</li>
+							<li>1 спальня</li>
+							<li>приватная баня</li>
+						</ul>
+
+						<div class="cabin-modal__included">
+							<h3>Что есть в домике</h3>
+							<ul data-cabin-included>
+								<li>двуспальная кровать и свежее постельное бельё</li>
+								<li>кухня с посудой, холодильником и чайной станцией</li>
+								<li>приватная баня с отдельной душевой</li>
+								<li>терраса, мангальная зона и вид на лес</li>
+								<li>Wi-Fi, полотенца и завтрак у панорамного окна</li>
+							</ul>
+						</div>
+
+						<div class="cabin-modal__footer">
+							<div class="cabin-modal__price">
+								<span>Стоимость</span>
+								<strong
+									><span data-cabin-price>от 19 800 ₽</span>
+									<small>/ сутки</small></strong
+								>
+							</div>
+							<a
+								class="button button--light cabin-modal__book"
+								href="#booking"
+								data-cabin-book="A-01"
+							>
+								Выбрать даты
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
 
 		<div class="booking-request" hidden>
 			<div class="booking-request__overlay" data-close-booking-modal></div>

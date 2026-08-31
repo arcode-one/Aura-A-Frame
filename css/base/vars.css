@@ -11,6 +11,9 @@
 	--line: rgba(246, 241, 232, 0.16);
 	--amber: #e9a14f;
 	--amber-soft: rgba(233, 161, 79, 0.28);
+	--scrollbar-track: rgba(246, 241, 232, 0.055);
+	--scrollbar-thumb: #d99547;
+	--scrollbar-thumb-hover: #f0b56c;
 	--main-color: #000;
 
 	/* radius */

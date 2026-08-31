@@ -4,6 +4,78 @@ html {
 	background: var(--dark);
 }
 
+html,
+.cabin-modal,
+.cabin-modal__panel,
+.booking-request,
+.custom-select__dropdown {
+	scrollbar-width: thin;
+	scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+html::-webkit-scrollbar,
+.cabin-modal::-webkit-scrollbar,
+.cabin-modal__panel::-webkit-scrollbar,
+.booking-request::-webkit-scrollbar,
+.custom-select__dropdown::-webkit-scrollbar {
+	width: 10px;
+	height: 10px;
+}
+
+html::-webkit-scrollbar-track,
+.cabin-modal::-webkit-scrollbar-track,
+.cabin-modal__panel::-webkit-scrollbar-track,
+.booking-request::-webkit-scrollbar-track,
+.custom-select__dropdown::-webkit-scrollbar-track {
+	border-radius: 999px;
+	background: var(--scrollbar-track);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.025);
+}
+
+html::-webkit-scrollbar-thumb,
+.cabin-modal::-webkit-scrollbar-thumb,
+.cabin-modal__panel::-webkit-scrollbar-thumb,
+.booking-request::-webkit-scrollbar-thumb,
+.custom-select__dropdown::-webkit-scrollbar-thumb {
+	min-height: 56px;
+	border: 2px solid transparent;
+	border-radius: 999px;
+	background:
+		linear-gradient(180deg, #f1b66f 0%, var(--scrollbar-thumb) 54%, #bd7531 100%)
+		padding-box;
+	box-shadow:
+		0 0 14px rgba(233, 161, 79, 0.2),
+		inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+html::-webkit-scrollbar-thumb:hover,
+.cabin-modal::-webkit-scrollbar-thumb:hover,
+.cabin-modal__panel::-webkit-scrollbar-thumb:hover,
+.booking-request::-webkit-scrollbar-thumb:hover,
+.custom-select__dropdown::-webkit-scrollbar-thumb:hover {
+	background:
+		linear-gradient(180deg, #ffd093 0%, var(--scrollbar-thumb-hover) 58%, #d88b3e 100%)
+		padding-box;
+}
+
+html::-webkit-scrollbar-button,
+.cabin-modal::-webkit-scrollbar-button,
+.cabin-modal__panel::-webkit-scrollbar-button,
+.booking-request::-webkit-scrollbar-button,
+.custom-select__dropdown::-webkit-scrollbar-button {
+	display: none;
+	width: 0;
+	height: 0;
+}
+
+html::-webkit-scrollbar-corner,
+.cabin-modal::-webkit-scrollbar-corner,
+.cabin-modal__panel::-webkit-scrollbar-corner,
+.booking-request::-webkit-scrollbar-corner,
+.custom-select__dropdown::-webkit-scrollbar-corner {
+	background: transparent;
+}
+
 .hero[id],
 .section[id] {
 	scroll-margin-top: var(--anchor-offset);
